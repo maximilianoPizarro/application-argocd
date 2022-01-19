@@ -2,7 +2,7 @@
 
 GitOps scenario &amp; workshop manifests. Currently used for the [GitOps Courses DevNation](https://developers.redhat.com/courses/gitops/getting-started-argocd-and-openshift-gitops-operator)
 
-#Install Red Hat GitOps Operator
+#Install Red Hat OpenShift GitOps
 
 ```bash
 oc get pods -n openshift-gitops
