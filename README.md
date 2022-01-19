@@ -1,4 +1,10 @@
 # openshift-gitops-example
+<p align="left">
+<img src="https://img.shields.io/badge/redhat-CC0000?style=for-the-badge&logo=redhat&logoColor=white" alt="Redhat">
+<img src="https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white" alt="kubernetes">
+<img src="https://argo-cd.readthedocs.io/en/stable/assets/status-badge-healthy-synced.png" alt="ArgoCD">
+
+</p>
 
 GitOps scenario &amp; workshop manifests. Currently used for the [GitOps Courses DevNation](https://developers.redhat.com/courses/gitops/getting-started-argocd-and-openshift-gitops-operator)
 
@@ -51,6 +57,8 @@ ls ~/.argocd/config
 ```bash
 oc apply -f https://raw.githubusercontent.com/maximilianoPizarro/openshift-gitops-examples/main/bgd-app.yaml
 ```
+
+#Update application
 
 ```bash
 argocd app sync bgd-app
