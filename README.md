@@ -30,3 +30,5 @@ source <(argocd completion bash)
 
 ls ~/.argocd/config
 
+
+oc apply -f https://raw.githubusercontent.com/maximilianoPizarro/openshift-gitops-examples/main/components/applications/bgd-app.yaml
