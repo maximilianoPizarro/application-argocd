@@ -6,7 +6,7 @@ metadata:
 spec:
   destination:
     namespace: bgd
-    server: https://45827-maximilianopiza-argocd-stpj676lgps.ws-us27.gitpod.io
+    server: https://kubernetes.default.svc
   project: default
   source:
     path: k8s
