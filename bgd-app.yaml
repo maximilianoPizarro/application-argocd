@@ -2,15 +2,15 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: bgd-app
-  namespace: openshift-gitops
+  namespace: default
 spec:
   destination:
     namespace: bgd
-    server: https://kubernetes.default.svc
+    server: http://127.0.0.1:45827
   project: default
   source:
     path: k8s
-    repoURL: https://github.com/maximilianoPizarro/openshift-gitops-examples
+    repoURL: https://github.com/maximilianoPizarro/application-argocd
     targetRevision: main
   syncPolicy:
     automated:
