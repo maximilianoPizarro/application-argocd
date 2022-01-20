@@ -2,13 +2,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  labels:
+    app: api-pedidosrapi-flask
   name: api-pedidosrapi-flask
   namespace: api-pedidosrapi-flask
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: bgd
+      app: api-pedidosrapi-flask
   strategy: {}
   template:
     metadata:
