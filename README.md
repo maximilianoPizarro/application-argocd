@@ -1,4 +1,4 @@
-# openshift-gitops-example
+# application-argocd
 <p align="left">
 <img src="https://img.shields.io/badge/redhat-CC0000?style=for-the-badge&logo=redhat&logoColor=white" alt="Redhat">
 <img src="https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white" alt="kubernetes">
@@ -25,7 +25,7 @@ oc get routes -n openshift-gitops | grep openshift-gitops-server | awk '{print $
 ```
 
 ```bash
-oc extract secret/openshift-gitops-cluster -n openshift-gitops --to=-
+kubectl -n default get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
 ```
 
 To login from the terminal, execute the following (replace $ARGOCD_SERVER_URL with the above URL):
@@ -55,7 +55,11 @@ ls ~/.argocd/config
 #Create application
 
 ```bash
-oc apply -f https://raw.githubusercontent.com/maximilianoPizarro/openshift-gitops-examples/main/bgd-app.yaml
+kubectl config get-contexts -o name
+```
+
+```bash
+kubectl apply -f https://raw.githubusercontent.com/maximilianoPizarro/application-argocd/main/bgd-app.yaml
 ```
 
 #Update application
