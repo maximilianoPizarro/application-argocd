@@ -3,14 +3,14 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: bgd
-  name: bgd
-  namespace: bgd
+    app: api-pedidosrapi-flask
+  name: api-pedidosrapi-flask
+  namespace: api-pedidosrapi-flask
 spec:
   ports:
   - port: 8080
     protocol: TCP
     targetPort: 8080
   selector:
-    app: bgd
+    app: api-pedidosrapi-flask
 ---
