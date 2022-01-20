@@ -3,9 +3,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: bgd
-  name: bgd
-  namespace: bgd
+    app: api-pedidosrapi-flask
+  name: api-pedidosrapi-flask
+  namespace: api-pedidosrapi-flask
 spec:
   replicas: 1
   selector:
@@ -16,7 +16,7 @@ spec:
     metadata:
       creationTimestamp: null
       labels:
-        app: bgd
+        app: api-pedidosrapi-flask
     spec:
       containers:
       - image: quay.io/maximilianopizarro/api-pedidosrapi-flask:latest
