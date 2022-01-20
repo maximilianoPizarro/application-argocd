@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - image: quay.io/maximilianopizarro/api-pedidosrapi-flask:latest
-        name: bgd
+        name: api-pedidosrapi-flask
         env:
         - name: COLOR
           value: "blue"
