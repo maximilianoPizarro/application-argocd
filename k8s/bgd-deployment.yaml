@@ -2,8 +2,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-    app: api-pedidosrapi-flask
   name: api-pedidosrapi-flask
   namespace: api-pedidosrapi-flask
 spec:
